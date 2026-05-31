@@ -1,0 +1,150 @@
+
+body {
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #1c1c1c;
+  font-size: 40px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: maroon; 
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 20px 30px;
+  color: white;
+  text-decoration: none;
+  font-family: "Times New Roman", serif;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Splash section styles */
+.splash {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+#loginLink {
+  display: inline-block;
+  padding: 20px 30px;
+  background-color: maroon; 
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-size: 30px;
+  transition: background-color 0.3s;
+}
+
+/* Hover style */
+#loginLink:hover {
+  background-color: #555;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+fieldset {
+    font-size: 200%;
+}
+fieldset label {
+    text-align: center;
+}
+fieldset label {
+    font-size: 40px;
+    margin-bottom: 0%;
+}
+fieldset input {
+    width: 100%;
+}
+fieldset p {
+    margin: 0%;
+}
+input[type=radio] {
+    width: 15%;
+}
+div {
+    text-align: center;
+}
+p {
+    font-size: 200%;
+}
+ h1 {
+    text-align: center;
+}
+form h2{
+    font-size: 40px;
+    margin-bottom: 0%;
+}
+form input {
+    width: 100%;
+}
+form p {
+    margin: 0%;
+}
+form[type=radio] {
+    width: 15%;
+
+}
+form[class=button] {
+    width: 40%;
+    
+}
+footer {
+    background-color: maroon;
+    color: white;
+    font-size: 20px;
+}
+/* Container for restaurant entries */
+#restaurantContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+article.restaurant {
+  display: flex; /* side-by-side layout */
+  align-items: flex-start; /* align to top */
+  background-color: darkgrey; /* bright gray background */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  max-width: fit-content; 
+}
+
+/* Style for the image inside each entry */
+article.restaurant img {
+  max-height: 150px; 
+  width: auto; 
+  margin-right: 15px; 
+}
+
+article.restaurant h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+article.restaurant p {
+  margin: 4px 0;
+}

@@ -1,0 +1,140 @@
+/* Body styles */
+body {
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #1c1c1c;
+}
+
+/* Header paragraph styling */
+header p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px 0;
+}
+
+article p {
+    font-size: 20px;
+}
+p {
+    color: #f0f0f0;
+}
+
+main p {
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    column-gap: 5%;
+    
+}
+
+
+aside {
+    align-self: flex-start;
+}
+
+/* Remove border radius for sharp edges and keep it inline with header */
+#loginLink {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: maroon; 
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Hover style */
+#loginLink:hover {
+  background-color: #555;
+}
+
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: maroon; /* optional background color */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-family: "Times New Roman", serif;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Splash section styles */
+.splash {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+/* Container for restaurant entries */
+#restaurantContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+article.restaurant {
+  display: flex; /* side-by-side layout */
+  align-items: flex-start; /* align to top */
+  background-color: darkgrey; /* bright gray background */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  max-width: 800px; 
+}
+
+/* Style for the image inside each entry */
+article.restaurant img {
+  max-height: 150px; 
+  width: auto; 
+  margin-right: 15px; 
+}
+
+article.restaurant h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+article.restaurant p {
+  margin: 4px 0;
+}
+
+footer {
+    background-color: maroon;
+    color: white;
+    font-size: 12px;
+}

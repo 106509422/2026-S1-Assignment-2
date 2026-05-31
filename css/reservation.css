@@ -1,0 +1,61 @@
+/* Error message container style */
+#errorMessagesContainer {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+  min-height: 1em;
+}
+
+
+
+form {
+  width: 50em;
+  margin-top: 20px; 
+  background-color: lightgray;
+}
+
+.textinput {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.textinput label {
+  text-align: right;
+  width: 10em;
+  margin-right: 1em;
+}
+
+.textinput input {
+  width: 50%;
+}
+
+.radioinput {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.radiolabel {
+  text-align: right;
+  width: 10em;
+  margin-right: 1em;
+}
+
+.radioinput input {
+  width: 2em;
+}
+
+.radioinput label {
+  margin-right: 1em;
+  margin-left: 0.5em;
+}
+
+.buttoninput {
+  text-align: right;
+  margin: 10px;
+}
+
+.buttoninput input {
+  width: auto;
+}
