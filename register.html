@@ -1,30 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />	
-    <meta name="description" content="Assessment2 homepage" />
-    <meta name="keywords" content="homepage" />
-    <meta name="author" content="Blake Cox" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <!-- <script src="jquery-1.9.1.min.js"></script> -->
-    <script src="js/login.js"></script>
-    <title>Register</title>
+<meta charset="utf-8" />	
+<meta name="description" content="Registration Page" />
+<meta name="keywords" content="Registration" />
+<meta name="author" content="Blake Cox" />
+<link rel="stylesheet" href="css/regform.css" />
+<link rel="stylesheet" href="css/styles.css" media="screen and (min-width: 768px)">
+<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+<script src="js/validation.js"></script>
+<title>Register</title>
 </head>
 <body>
-    <header>
+<header>
   <p>
     <a href="index.html">
-    <img src="images/placeholder.png" alt="coolLogo" width="50" height="50" />
-    <img src="images/dinerDirectoryText.png" alt="TitleText" width="200" height="50"/>
-    <span id="authLink"></span>
+      <img src="images/placeholder.png" alt="coolLogo" width="50" height="50" />
+      <img src="images/dinerDirectoryText.png" alt="TitleText" width="200" height="50"/>
     </a>
+    <a href="register.html" id="loginLink" class="btn-link">Login</a>
   </p>
-    </header>
+</header>
 <nav>
   <ul>
     <li><a href="restaurants.html">Restaurant Listings</a></li>
-    <li><a href="recommend.html">Recommendations</a></li>
-
+    <li><a href="reservation.html">Reservation</a></li>
   </ul>
 </nav>
-</nav>
+
+<main>
+  <div id="errorBox" style="border: 1px solid red; padding: 10px; margin-bottom: 10px; display: none; color: red;"></div>
+  <form method="post" id="regform" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+    <!-- Account Information -->
+    <fieldset>
+      <legend>Account Information</legend>
+      <div class="textinput">
+        <label for="sid">Username</label>
+        <input id="sid" type="text" name="id" />
+      </div>
+      <div class="textinput">
+        <label for="pwd1">Password</label>
+        <input id="pwd1" type="password" name="pwd1" />
+      </div>
+      <div class="textinput">
+        <label for="pwd2">Retype Password</label>
+        <input id="pwd2" type="password" name="pwd2" />
+      </div>
+    </fieldset>
+
+    <!-- User Details -->
+    <fieldset>
+      <legend>User Details</legend>
+      <!-- Email Address -->
+      <div class="textinput">
+        <label for="email">Email Address</label>
+        <input id="email" type="email" name="email" />
+      </div>
+      <!-- Phone Number -->
+      <div class="textinput">
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" name="phone" pattern="[0-9]{10,15}" placeholder="e.g., 1234567890" />
+      </div>
+      <!-- Gender -->
+      <div class="radioinput">
+        <span class="radiolabel">Gender</span>
+        <input id="genm" type="radio" name="gender" value="M" />
+        <label for="genm">Male</label>
+        <input id="genf" type="radio" name="gender" value="F" />
+        <label for="genf">Female</label>
+      </div>
+      <!-- Dietary Preferences -->
+      <div class="checkboxinput">
+        <span class="checkboxlabel">Dietary Preferences</span>
+        <input type="checkbox" id="vegetarian" name="diet[]" value="Vegetarian" />
+        <label for="vegetarian">Vegetarian</label>
+        <input type="checkbox" id="vegan" name="diet[]" value="Vegan" />
+        <label for="vegan">Vegan</label>
+        <input type="checkbox" id="halal" name="diet[]" value="Halal" />
+        <label for="halal">Halal</label>
+      </div>
+      <!-- Country/Region -->
+      <div class="textinput">
+        <label for="country">Country/Region</label>
+        <select id="country" name="country">
+          <option value="">Select your country</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="Australia">Australia</option>
+          <option value="Canada">Canada</option>
+        </select>
+      </div>
+    </fieldset>
+    <!-- Submit Button -->
+    <div class="buttoninput">
+      <input type="submit" value="Register" />
+    </div>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2026, Blake Cox</p>
+</footer>
+</body>
+</html>

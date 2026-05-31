@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />	
-    <meta name="description" content="Assessment2 restaurants page" />
-    <meta name="keywords" content="restaurants" />
-    <meta name="author" content="Blake Cox" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <script src="js/restaurantSearch.js"></script>
-    <script src="js/login.js"></script>
-    <title>Restaurants</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Assessment2 restaurants page" />
+<meta name="keywords" content="restaurants" />
+<meta name="author" content="Blake Cox" />
+<title>Restaurants</title>
+<link href="css/styles.css" rel="stylesheet" media="screen and (min-width: 768px)">
+<link href="css/mobile.css" rel="stylesheet" media="screen and (max-width: 767px)">
+<script src="js/restaurantSearch.js"></script>
+<script src="js/login.js"></script>
 </head>
 <body>
-    <header>
+<header>
   <p>
     <a href="index.html">
-    <img src="images/placeholder.png" alt="coolLogo" width="50" height="50" />
-    <img src="images/dinerDirectoryText.png" alt="TitleText" width="200" height="50"/>
-    <span id="authLink"></span>
+      <img src="images/placeholder.png" alt="coolLogo" width="50" height="50" />
+      <img src="images/dinerDirectoryText.png" alt="TitleText" width="200" height="50"/>
     </a>
+    <a href="register.html" id="loginLink" class="btn-link">Login</a>
   </p>
-    </header>
+</header>
 <nav>
   <ul>
     <li><a href="restaurants.html">Restaurant Listings</a></li>
-    <li><a href="recommend.html">Recommendations</a></li>
-
+    <li><a href="reservation.html">Reservation</a></li>
   </ul>
 </nav>
 <main>
-    <main>
   <section id="restaurant-section">
     <h2>Restaurant Listings</h2>
-    
     <!-- Search inputs -->
     <input type="text" id="nameSearch" placeholder="Search by name" />
     <input type="text" id="tagSearch" placeholder="Search by tags (e.g., Vegan, Family)" />
-
+    <input type="number" id="priceMin" placeholder="Min price level (1-4)" min="1" max="4" />
+    <input type="number" id="priceMax" placeholder="Max price level (1-4)" min="1" max="4" />
+    <button id="sortPriceAsc">Sort Price Ascending</button>
+    <button id="sortPriceDesc">Sort Price Descending</button>
     <!-- Container for restaurant articles -->
     <div id="restaurantContainer"></div>
   </section>
+  <aside>
+    <img src="images/Ad.png" alt="Ad-placeholder"/>
+  </aside>
 </main>
-
-</main>
-
+<footer>
+  <p>&copy; 2026, Blake Cox</p>  
+</footer>
 </body>
+</html>

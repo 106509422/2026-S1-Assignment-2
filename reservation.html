@@ -1,32 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />	
-    <meta name="description" content="Assessment2 Reservation" />
-    <meta name="keywords" content="Reservation" />
-    <meta name="author" content="Blake Cox" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <!-- <script src="jquery-1.9.1.min.js"></script> -->
-    <script src="js/login.js"></script>
-    <title>Reservations</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reservation Form</title>
+<link rel="stylesheet" href="css/regform.css" />
+<link href="css/styles.css" rel="stylesheet" media="screen and (min-width:768px)"/>
+<link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:767px)" />
+<script src="js/reservationValidation.js"></script>
 </head>
 <body>
-    <header>
+<header>
   <p>
     <a href="index.html">
-    <img src="images/placeholder.png" alt="coolLogo" width="50" height="50" />
-    <img src="images/dinerDirectoryText.png" alt="TitleText" width="200" height="50"/>
-    <span id="authLink"></span>
+      <img src="images/placeholder.png" alt="coolLogo" width="50" height="50" />
+      <img src="images/dinerDirectoryText.png" alt="TitleText" width="200" height="50"/>
     </a>
+    <a href="register.html" id="loginLink" class="btn-link">Login</a>
   </p>
-    </header>
-<nav>
-  <ul>
+</header>
 <nav>
   <ul>
     <li><a href="restaurants.html">Restaurant Listings</a></li>
-    <li><a href="recommend.html">Recommendations</a></li>
-
+    <li><a href="reservation.html">Reservation</a></li>
   </ul>
 </nav>
 
+<form id="reservationForm" onsubmit="return validate();" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+<div id="errorBox" style="border: 1px solid red; padding: 10px; margin-bottom: 10px; display: none; color: red;"></div>
+
+<!-- Customer Details -->
+<fieldset>
+  <legend>Customer Details</legend>
+  <div class="textinput">
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" />
+  </div>
+  <div class="textinput">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" />
+  </div>
+  <div class="textinput">
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" />
+  </div>
+</fieldset>
+
+<!-- Reservation Details -->
+<fieldset>
+  <legend>Reservation Details</legend>
+  <div class="textinput">
+    <label for="restaurant">Restaurant</label>
+    <select id="restaurant" name="restaurant">
+      <option value="">Select</option>
+      <!-- options populated dynamically or hardcoded -->
+    </select>
+  </div>
+  <div class="textinput">
+    <label for="date">Date & Time</label>
+    <input type="datetime-local" id="date" name="date" />
+  </div>
+  <div class="textinput">
+    <label for="people">Number of People</label>
+    <input type="number" id="people" name="people" min="1" />
+  </div>
+  <div class="textinput">
+    <label for="requests">Special Requests</label>
+    <textarea id="requests" name="requests" rows="3"></textarea>
+  </div>
+  <div class="textinput">
+    <label for="depositAmount">Deposit Amount</label>
+    <input type="text" id="depositAmount" name="depositAmount" readonly />
+  </div>
+  <div class="textinput">
+    <label for="depositMethod">Deposit Method</label>
+    <select id="depositMethod" name="depositMethod">
+      <option value="">Select</option>
+      <option value="voucher">Voucher</option>
+      <option value="online">Online payment</option>
+    </select>
+  </div>
+
+  <!-- Voucher Code -->
+  <div id="voucherDiv" style="display:none;">
+    <div class="textinput">
+      <label for="voucherCode">Voucher Code</label>
+      <input type="text" id="voucherCode" name="voucherCode" maxlength="12" placeholder="12 digits" />
+    </div>
+  </div>
+
+  <!-- Card Details -->
+  <div id="cardDetailsDiv" style="display:none;">
+    <div class="textinput">
+      <label for="cardName">Name on Card</label>
+      <input type="text" id="cardName" name="cardName" />
+    </div>
+    <div class="textinput">
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" name="cardNumber" maxlength="16" placeholder="15 or 16 digits" />
+    </div>
+    <div style="display:flex; gap:10px;">
+      <div style="flex:1;">
+        <label for="expMonth">Exp Month</label>
+        <input type="text" id="expMonth" name="expMonth" maxlength="2" placeholder="MM" />
+      </div>
+      <div style="flex:1;">
+        <label for="expYear">Exp Year</label>
+        <input type="text" id="expYear" name="expYear" maxlength="4" placeholder="YYYY" />
+      </div>
+    </div>
+    <div class="textinput">
+      <label for="cvc">CVC</label>
+      <input type="text" id="cvc" name="cvc" maxlength="4" placeholder="CVC" />
+    </div>
+    <div class="textinput">
+      <label for="billingAddress">Billing Address</label>
+      <input type="text" id="billingAddress" name="billingAddress" />
+    </div>
+    <div class="textinput">
+      <label for="postcode">Postcode</label>
+      <input type="text" id="postcode" name="postcode" />
+    </div>
+    <div class="textinput">
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" />
+    </div>
+  </div>
+
+  <!-- Billing email -->
+  <div class="textinput">
+    <input type="checkbox" id="sameEmail" name="sameEmail" />
+    <label for="sameEmail">Same as email address</label>
+  </div>
+  <div class="textinput">
+    <label for="billingEmail">Billing Email Address</label>
+    <input type="email" id="billingEmail" name="billingEmail" />
+  </div>
+
+  <div class="buttoninput">
+    <button type="submit">Reserve</button>
+  </div>
+</form>
+</div> <!-- close the main container div if you had one -->
+<footer>
+  <p>&copy; 2026, Blake Cox</p>  
+</footer>
+</body>
+</html>

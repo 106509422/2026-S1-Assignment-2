@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />	
-    <meta name="description" content="Assessment2 homepage" />
-    <meta name="keywords" content="homepage" />
-    <meta name="author" content="Blake Cox" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <!-- <script src="jquery-1.9.1.min.js"></script> -->
-    <script src="js/login.js"></script>
-    <title>Welcome</title>
+  <meta charset="utf-8" />	
+  <meta name="description" content="Assessment2 homepage" />
+  <meta name="keywords" content="homepage" />
+  <meta name="author" content="Blake Cox" />
+  <link href="css/styles.css" rel="stylesheet" media="screen and (min-width: 768px)">
+  <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width: 767px)">
+  <script src="js/login.js"></script>
+  <title>Welcome</title>
 </head>
 <body>
-    <header>
-  <p>
-    <a href="index.html">
-    <img src="images/placeholder.png" alt="coolLogo" width="50" height="50" />
-    <img src="images/dinerDirectoryText.png" alt="TitleText" width="200" height="50"/>
-    <span id="authLink"></span>
-    </a>
-  </p>
-    </header>
-<nav>
-  <ul>
-    <li><a href="restaurants.html">Restaurant Listings</a></li>
-    <li><a href="recommend.html">Recommendations</a></li>
+  <header>
+    <p>
+      <a href="index.html">
+        <img src="images/placeholder.png" alt="coolLogo" width="50" height="50" />
+        <img src="images/dinerDirectoryText.png" alt="TitleText" width="200" height="50"/>
+      </a>
+      <a href="register.html" id="loginLink" class="btn-link">Login</a>
+    </p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="restaurants.html">Restaurant Listings</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+    </ul>
+  </nav>
 
-  </ul>
-</nav>
+  <!-- Remove duplicate script inclusion -->
+  <!-- <script src="js/login.js"></script> -->
 
-<!-- Your page content can go here -->
+  <div class="splash">
+    <img src="images/welcomeSplash.JPG" alt="Big wallpaper" style="width:100%; height:auto;"/>
+    <div class="overlay-text">Free will is a joke; use my website to tell you where to eat</div>
+  </div>
 
-<script src="js/login.js"></script>
+  <section>
+    <p>Welcome to Diner Directory, the best place to find the food you want.</p>
+    <p>Within 3 minutes you can find a place to eat fitting the exact niche you crave.</p>
+    <p>Just go to our restaurants page to browse and search for exactly what you are looking for.</p>
+    <p>Or, if you already know, go to the reservations page and fill out our quick and easy form.</p>
+    <p>Remember to login to keep your preferences saved for later.</p>
+  </section>
 
-<div class="splash">
-    <img src="images/welcomeSplash.JPG" alt="Big wallpaper" width="100%" height="auto"/>
-  <div class="overlay-text">Free will is a joke; use my website to tell you where to eat</div>
-</div>
-
+  <footer>
+    <p>&copy; 2026, Blake Cox</p>
+  </footer>
 </body>
 </html>
